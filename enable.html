@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enable/Disable Button Example</title>
+</head>
+<body>
+	<label for="checkbox">Check to enable button:</label>
+	<input type="checkbox" id="checkbox" onchange="toggleButton()">
+
+	<button type="button" id="button" disabled>Click me!</button>
+
+	<script>
+		function toggleButton() {
+			// Get the checkbox and button elements
+			var checkbox = document.getElementById("checkbox");
+			var button = document.getElementById("button");
+
+			// If the checkbox is checked, enable the button
+			if (checkbox.checked) {
+				button.disabled = false;
+			} else {
+				button.disabled = true;
+			}
+		}
+	</script>
+</body>
+</html>

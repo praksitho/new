@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+</head>
+<body>
+	<form>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" onblur="validateUsername()"><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" onblur="validatePassword()"><br>
+
+		<button type="submit" onclick="login()">Login</button>
+	</form>
+
+	<script>
+		function validateUsername() {
+			// Get the username input field
+			var username = document.getElementById("username");
+
+			// Check if the username field is empty
+			if (username.value == "") {
+				alert("Username cannot be empty.");
+			}
+		}
+
+		function validatePassword() {
+			// Get the password input field
+			var password = document.getElementById("password");
+
+			// Check if the password field is empty
+			if (password.value == "") {
+				alert("Password cannot be empty.");
+			}
+		}
+
+		function login() {
+			// Get the username and password from the form
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			// Validate the username and password
+			if (username == "admin" && password == "password") {
+				alert("Login successful!");
+			} else {
+				alert("Invalid username or password.");
+			}
+		}
+	</script>
+</body>
+</html>

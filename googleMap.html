@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Maps API Example</title>
+	<script src="https://www.google.com/maps/place/American+University+of+Phnom+Penh/@11.303233,104.3935493,10.01z/data=!4m22!1m15!4m14!1m5!1m1!1s0x31095177ee61fd7d:0xa66cfdf83a58b2ae!2m2!1d104.9009457!2d11.6160001!1m6!1m2!1s0x31095177ee61fd7d:0xa66cfdf83a58b2ae!2sAmerican+University+of+Phnom+Penh,+Kilometer+6,+278H,+Street+201R,+Kroalkor+Village,+Unnamed+Road,+Phnom+Penh,+Cambodia!2m2!1d104.9009457!2d11.6160001!3e0!3m5!1s0x31095177ee61fd7d:0xa66cfdf83a58b2ae!8m2!3d11.6160001!4d104.9009457!16s%2Fm%2F0105kyzn
+    "></script>
+	<script>
+		function initMap() {
+			// Set the coordinates of the center of the map
+			var center = {lat: 37.7749, lng: -122.4194};
+
+			// Create a new map object and set its center and zoom level
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center: center,
+				zoom: 13
+			});
+
+			// Add a marker at the center of the map
+			var marker = new google.maps.Marker({
+				position: center,
+				map: map,
+				title: 'San Francisco'
+			});
+		}
+	</script>
+</head>
+<body onload="initMap()">
+	<div id="map" style="height: 400px;"></div>
+</body>
+</html>
